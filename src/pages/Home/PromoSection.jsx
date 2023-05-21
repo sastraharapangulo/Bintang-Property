@@ -1,6 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { styled } from 'styled-components';
+import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -33,7 +34,6 @@ const Container = styled.div`
       }
       .fs-5 {
         position: absolute;
-        display: none;
         bottom: 0;
         width: 100%;
         color: #ffffff;
@@ -41,10 +41,12 @@ const Container = styled.div`
 
       &:hover {
         img {
-          filter: blur(2px);
+          filter: blur(1px);
         }
         .fs-5 {
-          display: block;
+          /* filter: drop-shadow(-20px 0px 20px rgba(0, 0, 0, 0.9)); */
+          /* text-shadow: 0px 0px 10px #000000; */
+          background-color: #000000;
         }
       }
     }
@@ -127,7 +129,7 @@ const Container = styled.div`
     }
 
     .swiper-pagination .swiper-pagination-bullet-active {
-      background: #4e2ab2;
+      background: ${({ theme }) => theme.primary[500]};
     }
   }
 `;
@@ -136,7 +138,7 @@ function PromoSection() {
   return (
     <Container className="container">
       <br />
-      <h2 className="text-center">Promo Khusus Untukmu</h2>
+      <h4 className="text-center">Promo Khusus Untukmu</h4>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -165,52 +167,66 @@ function PromoSection() {
         <SwiperSlide>
           <Link to="/property">
             <img src={slide_image_1} alt="slide_image" />
-            <p class="fs-5 text-center">Diskon 5% untuk 5 pembeli pertama</p>
+            <p className="fs-5 text-center">
+              Diskon 5% untuk 5 pembeli pertama
+            </p>
           </Link>
         </SwiperSlide>
         <SwiperSlide>
           <Link to="/property">
             <img src={slide_image_2} alt="slide_image" />
-            <p class="fs-5 text-center">Diskon 5% untuk 5 pembeli pertama</p>
+            <p className="fs-5 text-center">
+              Diskon 5% untuk 5 pembeli pertama
+            </p>
           </Link>
         </SwiperSlide>
         <SwiperSlide>
           <Link to="/property">
             <img src={slide_image_3} alt="slide_image" />
-            <p class="fs-5 text-center">Diskon 5% untuk 5 pembeli pertama</p>
+            <p className="fs-5 text-center">
+              Diskon 5% untuk 5 pembeli pertama
+            </p>
           </Link>
         </SwiperSlide>
         <SwiperSlide>
           <Link to="/property">
             <img src={slide_image_4} alt="slide_image" />
-            <p class="fs-5 text-center">Diskon 5% untuk 5 pembeli pertama</p>
+            <p className="fs-5 text-center">
+              Diskon 5% untuk 5 pembeli pertama
+            </p>
           </Link>
         </SwiperSlide>
         <SwiperSlide>
           <Link to="/property">
             <img src={slide_image_5} alt="slide_image" />
-            <p class="fs-5 text-center">Diskon 5% untuk 5 pembeli pertama</p>
+            <p className="fs-5 text-center">
+              Diskon 5% untuk 5 pembeli pertama
+            </p>
           </Link>
         </SwiperSlide>
         <SwiperSlide>
           <Link to="/property">
             <img src={slide_image_6} alt="slide_image" />
-            <p class="fs-5 text-center">Diskon 5% untuk 5 pembeli pertama</p>
+            <p className="fs-5 text-center">
+              Diskon 5% untuk 5 pembeli pertama
+            </p>
           </Link>
         </SwiperSlide>
         <SwiperSlide>
           <Link to="/property">
             <img src={slide_image_7} alt="slide_image" />
-            <p class="fs-5 text-center">Diskon 5% untuk 5 pembeli pertama</p>
+            <p className="fs-5 text-center">
+              Diskon 5% untuk 5 pembeli pertama
+            </p>
           </Link>
         </SwiperSlide>
 
         <div className="slider-controler">
           <div className="swiper-button-prev slider-arrow">
-            <ion-icon name="arrow-back-outline"></ion-icon>
+            <ArrowBackIos />
           </div>
           <div className="swiper-button-next slider-arrow">
-            <ion-icon name="arrow-forward-outline"></ion-icon>
+            <ArrowForwardIos />
           </div>
           <div className="swiper-pagination"></div>
         </div>

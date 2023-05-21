@@ -2,6 +2,7 @@ import React from 'react';
 import bg from '../../assets/images/bg.jpg';
 import { styled } from 'styled-components';
 import { Link } from 'react-router-dom';
+import { useTheme } from '@mui/material/styles';
 
 const Main = styled.div`
   position: relative;
@@ -18,7 +19,7 @@ const Main = styled.div`
     right: 0;
     width: 100%;
     height: 100%;
-    background-color: #4e2ab2;
+    background-color: ${({ theme }) => theme.primary[500]};
     opacity: 0.4;
   }
   .container {
@@ -38,14 +39,14 @@ const Main = styled.div`
 
     .button {
       text-decoration: none;
-      border: 1px solid #4e2ab2;
+      border: 1px solid ${({ theme }) => theme.secondary[500]};
       color: #ffffff;
       padding: 5px;
-      height: fit-content;
+      height: max-content;
       border-radius: 5px;
       font-weight: 500;
       &:hover {
-        background-color: #4e2ab2;
+        background-color: ${({ theme }) => theme.secondary[500]};
       }
     }
 
@@ -62,12 +63,18 @@ function MainSection() {
         <div className="text">
           <h1 className="lh-1">Jual Beli & Sewa Menyewa Property</h1>
           <p>Solusi Cepat, Tepat Urusan Jual Beli Seperti Yang Anda Mau</p>
-          <div className="link" style={{ gap: '.5rem', display: 'flex' }}>
+          <div
+            className="link"
+            style={{ gap: '.5rem', display: 'flex', flexWrap: 'wrap' }}
+          >
             <Link to="/about" className="button">
               TENTANG KAMI
             </Link>
             <Link to="#saya" className="button">
-              TENTANG KAMI
+              HUBUNGI KAMI
+            </Link>
+            <Link to="#saya" className="button">
+              CARI PROPERTI
             </Link>
           </div>
         </div>

@@ -4,7 +4,7 @@ import { styled } from 'styled-components';
 import logo from '../assets/images/logo/logo.png';
 
 const Container = styled.div`
-  border-bottom: 4px solid #4e2ab2;
+  border-bottom: 4px solid ${({ theme }) => theme.primary[500]};
   position: sticky;
   top: 0;
   z-index: 999;
