@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Bintang-Property/static/css/main.1fe0e13a.css",
+    "main.js": "/Bintang-Property/static/js/main.83db7c6b.js",
+    "static/media/img_6.jpg": "/Bintang-Property/static/media/img_6.f5d8ce18ec9be986d632.jpg",
+    "static/media/bg.jpg": "/Bintang-Property/static/media/bg.b9e4f9057cb7293e7d9b.jpg",
+    "static/media/img_5.jpg": "/Bintang-Property/static/media/img_5.99ad32525d44d9259050.jpg",
+    "static/media/img_7.jpg": "/Bintang-Property/static/media/img_7.3bc17609bb9a1a8f04ee.jpg",
+    "static/media/img_2.jpg": "/Bintang-Property/static/media/img_2.6992eb76ae4a29e85650.jpg",
+    "static/media/img_1.jpg": "/Bintang-Property/static/media/img_1.fec23fdd3aa8909816c6.jpg",
+    "static/media/img_4.jpg": "/Bintang-Property/static/media/img_4.1c8f04ecb21b19ed1b69.jpg",
+    "static/media/img_3.jpg": "/Bintang-Property/static/media/img_3.fa1e95be23e698a4b72a.jpg",
+    "static/media/logo.png": "/Bintang-Property/static/media/logo.1b9d55ca835f5e58a8d6.png",
+    "index.html": "/Bintang-Property/index.html",
+    "main.1fe0e13a.css.map": "/Bintang-Property/static/css/main.1fe0e13a.css.map",
+    "main.83db7c6b.js.map": "/Bintang-Property/static/js/main.83db7c6b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1fe0e13a.css",
+    "static/js/main.83db7c6b.js"
+  ]
+}
