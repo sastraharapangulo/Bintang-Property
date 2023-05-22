@@ -27,15 +27,16 @@ function Property() {
     <Container className="container mt-3 mb-3">
       <div className="searchInput d-flex gap-2">
         <input
-          class="form-control me-2"
+          className="form-control me-2"
           type="search"
           placeholder="Search"
           aria-label="Search"
         />
-        <button class="btn btn-outline-success" type="submit">
+        <button className="btn btn-outline-success" type="submit">
           Search
         </button>
       </div>
+      <div className="filter"></div>
       <div className="d-flex gap-2 flex-wrap justify-content-around mt-3">
         <Card />
         <Card />

@@ -6,6 +6,10 @@ import { shades } from './theme';
 import Footer from './components/Footer';
 import Property from './pages/Property';
 import NoPages from './components/NoPages';
+import WhatsApp from './components/WhatsApp';
+import PropertyDetail from './pages/PropertyDetail';
+import AboutUs from './pages/AboutUs';
+import News from './pages/News';
 
 function App() {
   return (
@@ -13,10 +17,18 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route exact path="*" element={<NoPages />} />
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/property" element={<Property />} />
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="property">
+              <Route index element={<Property />} />
+              <Route path=":userId" element={<PropertyDetail />} />
+            </Route>
+            <Route path="aboutUs" element={<AboutUs />} />
+            <Route path="news" element={<News />} />
+            <Route path="*" element={<NoPages />} />
+          </Route>
         </Routes>
+        <WhatsApp />
         <Footer />
       </BrowserRouter>
     </ThemeProvider>

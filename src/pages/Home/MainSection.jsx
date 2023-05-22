@@ -67,13 +67,13 @@ function MainSection() {
             className="link"
             style={{ gap: '.5rem', display: 'flex', flexWrap: 'wrap' }}
           >
-            <Link to="/about" className="button">
+            <Link to="/aboutUs" className="button">
               TENTANG KAMI
             </Link>
-            <Link to="#saya" className="button">
+            <Link to="#contact" className="button">
               HUBUNGI KAMI
             </Link>
-            <Link to="#saya" className="button">
+            <Link to="/property" className="button">
               CARI PROPERTI
             </Link>
           </div>

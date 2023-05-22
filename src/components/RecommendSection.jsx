@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { styled } from 'styled-components';
-import Card from '../../components/Card';
+import Card from './Card';
 
 const Container = styled.div`
   .main {
@@ -10,14 +10,14 @@ const Container = styled.div`
 
     .button {
       text-decoration: none;
-      border: 1px solid ${({ theme }) => theme.primary[500]};
+      border: 1px solid ${({ theme }) => theme.secondary[500]};
       color: #000000;
       padding: 0 5px;
       height: fit-content;
       border-radius: 5px;
       font-weight: 500;
       &:hover {
-        background-color: ${({ theme }) => theme.primary[500]};
+        background-color: ${({ theme }) => theme.secondary[500]};
         color: #ffffff;
       }
     }
@@ -49,24 +49,12 @@ function RecommendSection() {
         </Link>
       </div>
       <div className="cards">
-        <Link to="property" className="content">
-          <Card />
-        </Link>
-        <Link to="property" className="content">
-          <Card />
-        </Link>
-        <Link to="property" className="content">
-          <Card />
-        </Link>
-        <Link to="property" className="content">
-          <Card />
-        </Link>
-        <Link to="property" className="content">
-          <Card />
-        </Link>
-        <Link to="property" className="content">
-          <Card />
-        </Link>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </div>
       <br />
     </Container>

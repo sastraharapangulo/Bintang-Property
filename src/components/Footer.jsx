@@ -46,10 +46,18 @@ function Footer() {
             </p>
           </div>
           <div className="col-4 col-md-4 d-grid">
-            <Link className="menu">Properti</Link>
-            <Link className="menu">Promo</Link>
-            <Link className="menu">Tentang Kami</Link>
-            <Link className="menu">Kontak Kami</Link>
+            <Link className="menu" to="/property">
+              Properti
+            </Link>
+            <Link className="menu" to="/#promo">
+              Promo
+            </Link>
+            <Link className="menu" to="/about">
+              Tentang Kami
+            </Link>
+            <Link className="menu" to="/#contact">
+              Kontak Kami
+            </Link>
           </div>
           <div className="col-8 col-md-4 d-grid">
             Kontak Kami

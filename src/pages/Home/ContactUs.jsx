@@ -1,6 +1,6 @@
 import { Email, LocationOn, WhatsApp } from '@mui/icons-material';
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { styled } from 'styled-components';
 
 const Container = styled.div`
@@ -38,10 +38,18 @@ const Container = styled.div`
 `;
 
 function ContactUs() {
+  const contactRef = useRef(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === '#contact') {
+      contactRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [location]);
   return (
-    <Container>
+    <Container ref={contactRef}>
       <br />
-      <div className="container">
+      <div className="container" id="contact">
         <div className="row">
           <div className="col-12 col-md-6 first">
             <h4>Kontak Kami</h4>

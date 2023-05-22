@@ -36,19 +36,44 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? 'active nav-link' : 'nav-link'
+                  }
+                >
                   Home
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Features
-                </a>
+                <NavLink
+                  to="/property"
+                  className={({ isActive }) =>
+                    isActive ? 'active nav-link' : 'nav-link'
+                  }
+                >
+                  Properti
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Pricing
-                </a>
+                <NavLink
+                  to="/news"
+                  className={({ isActive }) =>
+                    isActive ? 'active nav-link' : 'nav-link'
+                  }
+                >
+                  Berita
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  to="/aboutUs"
+                  className={({ isActive }) =>
+                    isActive ? 'active nav-link' : 'nav-link'
+                  }
+                >
+                  Tentang Kami
+                </NavLink>
               </li>
               <li className="nav-item dropdown">
                 <a
@@ -58,22 +83,23 @@ function Navbar() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Dropdown link
+                  Simulasi KPR
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Action
+                    <a
+                      className="dropdown-item"
+                      href="https://www.btnproperti.co.id/tools/simulasi-kpr"
+                    >
+                      BANK BTN
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Something else here
+                    <a
+                      className="dropdown-item"
+                      href="https://www.lamudi.co.id/kalkulator-simulasi-kpr-bni"
+                    >
+                      BANK BNI
                     </a>
                   </li>
                 </ul>

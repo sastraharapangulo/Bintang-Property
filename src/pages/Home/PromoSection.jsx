@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { styled } from 'styled-components';
 import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material';
@@ -17,7 +17,7 @@ import slide_image_4 from '../../assets/images/img_4.jpg';
 import slide_image_5 from '../../assets/images/img_5.jpg';
 import slide_image_6 from '../../assets/images/img_6.jpg';
 import slide_image_7 from '../../assets/images/img_7.jpg';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Container = styled.div`
   .swiper_container {
@@ -135,8 +135,16 @@ const Container = styled.div`
 `;
 
 function PromoSection() {
+  const promoRef = useRef(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === '#promo') {
+      promoRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [location]);
   return (
-    <Container className="container">
+    <Container className="container" id="promo" ref={promoRef}>
       <br />
       <h4 className="text-center">Promo Khusus Untukmu</h4>
       <Swiper
@@ -165,7 +173,7 @@ function PromoSection() {
         className="swiper_container"
       >
         <SwiperSlide>
-          <Link to="/property">
+          <Link to="/property/khakdj">
             <img src={slide_image_1} alt="slide_image" />
             <p className="fs-5 text-center">
               Diskon 5% untuk 5 pembeli pertama
@@ -173,7 +181,7 @@ function PromoSection() {
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link to="/property">
+          <Link to="/property/khakdj">
             <img src={slide_image_2} alt="slide_image" />
             <p className="fs-5 text-center">
               Diskon 5% untuk 5 pembeli pertama
@@ -181,7 +189,7 @@ function PromoSection() {
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link to="/property">
+          <Link to="/property/khakdj">
             <img src={slide_image_3} alt="slide_image" />
             <p className="fs-5 text-center">
               Diskon 5% untuk 5 pembeli pertama
@@ -189,7 +197,7 @@ function PromoSection() {
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link to="/property">
+          <Link to="/property/khakdj">
             <img src={slide_image_4} alt="slide_image" />
             <p className="fs-5 text-center">
               Diskon 5% untuk 5 pembeli pertama
@@ -197,7 +205,7 @@ function PromoSection() {
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link to="/property">
+          <Link to="/property/khakdj">
             <img src={slide_image_5} alt="slide_image" />
             <p className="fs-5 text-center">
               Diskon 5% untuk 5 pembeli pertama
@@ -205,7 +213,7 @@ function PromoSection() {
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link to="/property">
+          <Link to="/property/khakdj">
             <img src={slide_image_6} alt="slide_image" />
             <p className="fs-5 text-center">
               Diskon 5% untuk 5 pembeli pertama
@@ -213,7 +221,7 @@ function PromoSection() {
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link to="/property">
+          <Link to="/property/khakdj">
             <img src={slide_image_7} alt="slide_image" />
             <p className="fs-5 text-center">
               Diskon 5% untuk 5 pembeli pertama
