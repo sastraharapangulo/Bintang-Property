@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { styled } from 'styled-components';
 import Card from './Card';
+import PropertyData from '../assets/data/Property';
 
 const Container = styled.div`
   .main {
@@ -39,6 +40,28 @@ const Container = styled.div`
 `;
 
 function RecommendSection() {
+  const [randomProperties, setRandomProperties] = useState([]);
+
+  useEffect(() => {
+    // List data properti
+    const propertyData = PropertyData.data;
+
+    // Mendapatkan 5 data properti secara acak
+    const getRandomProperties = () => {
+      const randomProperties = [];
+      while (randomProperties.length < 4) {
+        const randomProperty =
+          propertyData[Math.floor(Math.random() * propertyData.length)];
+        if (!randomProperties.includes(randomProperty)) {
+          randomProperties.push(randomProperty);
+        }
+      }
+      return randomProperties;
+    };
+
+    // Set data properti acak ke state
+    setRandomProperties(getRandomProperties());
+  }, []);
   return (
     <Container className="container">
       <br />
@@ -49,12 +72,11 @@ function RecommendSection() {
         </Link>
       </div>
       <div className="cards">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {randomProperties.map((property) => (
+          <div key={property.id}>
+            <Card item={property} />
+          </div>
+        ))}
       </div>
       <br />
     </Container>

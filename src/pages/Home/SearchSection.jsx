@@ -65,7 +65,7 @@ function SearchSection() {
           <p>
             Bintang Property mempunyai banyak sekali pilihan properti untukmu
           </p>
-          <Link to="#saya" className="button">
+          <Link to="/property" className="button">
             CARI PROPERTI
           </Link>
         </div>

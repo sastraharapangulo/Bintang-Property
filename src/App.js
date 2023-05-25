@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import { ThemeProvider } from 'styled-components';
@@ -14,7 +14,7 @@ import News from './pages/News';
 function App() {
   return (
     <ThemeProvider theme={shades}>
-      <HashRouter>
+      <BrowserRouter>
         <Navbar />
         <Routes>
           <Route path="/">
@@ -30,7 +30,7 @@ function App() {
         </Routes>
         <WhatsApp />
         <Footer />
-      </HashRouter>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
